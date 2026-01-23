@@ -25,16 +25,16 @@ let movieFind = async (searchBox) => {
     let response = await fetch(
       `https://www.omdbapi.com/?t=${searchBox}&apikey=9ceaf3a1`
     );
-    console.log(response);
 
     let data = await response.json();
-    console.log(data);
+
     movieTitle.textContent = data.Title;
     rating.innerHTML = `Rating </br> Rotten Tomatoes: ${data.Ratings[0].Value} </br> Rotten Tomatoes: ${data.Ratings[1].Value} </br> Rotten Tomatoes: ${data.Ratings[2].Value} </br>`;
     genre.textContent = `Genre: ${data.Genre}`;
     director.textContent = `Directed by: ${data.Director}`;
     stars.textContent = `Starring: ${data.Actors}`;
     plot.textContent = `Plot: ${data.Plot}`;
+    year.textContent = `Year: ${data.Year}`;
     duration.textContent = `Duration: ${data.Runtime}`;
     poster.src = data.Poster;
 

@@ -38,7 +38,7 @@ body {
 }
 /* Movie visuals section */
 #movieVisuals {
-  margin-top: 50px;
+  margin: 50px 0;
 }
 #movieDetails {
   display: inline-block;
